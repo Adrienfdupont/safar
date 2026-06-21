@@ -1,0 +1,1 @@
+import{L as e,h as t,p as n}from"../chunks/B8FBzWjY.js";import"../chunks/xihTtKlq.js";import"../chunks/CJFzawdq.js";var r=t(`<h1>Safar</h1> <p><a href="/users">View Users</a></p>`,1);function i(t){var i=r();e(2),n(t,i)}export{i as component};
