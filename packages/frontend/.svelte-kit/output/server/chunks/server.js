@@ -3003,6 +3003,7 @@ function to_style(value, styles) {
 //#region ../../node_modules/svelte/src/internal/server/hydration.js
 var BLOCK_OPEN = `<!--[-->`;
 var BLOCK_CLOSE = `<!--]-->`;
+var EMPTY_COMMENT = `<!---->`;
 //#endregion
 //#region ../../node_modules/svelte/src/internal/server/abort-signal.js
 /** @type {AbortController | null} */
@@ -3997,6 +3998,19 @@ function render(component, options = {}) {
 	return Renderer.render(component, options);
 }
 /**
+* @param {string} hash
+* @param {Renderer} renderer
+* @param {(renderer: Renderer) => Promise<void> | void} fn
+* @returns {void}
+*/
+function head(hash, renderer, fn) {
+	renderer.head((renderer) => {
+		renderer.push(`<!--${hash}-->`);
+		renderer.child(fn);
+		renderer.push(EMPTY_COMMENT);
+	});
+}
+/**
 * @param {Record<string, unknown>} attrs
 * @param {string} [css_hash]
 * @param {Record<string, boolean>} [classes]
@@ -4030,6 +4044,15 @@ function attributes(attrs, css_hash, classes, styles, flags = 0) {
 		attr_str += attr(name, value, is_html && is_boolean_attribute(name));
 	}
 	return attr_str;
+}
+/**
+* @param {any} value
+* @param {string | undefined} [hash]
+* @param {Record<string, boolean>} [directives]
+*/
+function attr_class(value, hash, directives) {
+	var result = to_class(value, hash, directives);
+	return result ? ` class="${escape_html(result, true)}"` : "";
 }
 /**
 * @param {Renderer} renderer
@@ -4077,4 +4100,4 @@ function derived(fn) {
 	};
 }
 //#endregion
-export { define_property as $, get_next_sibling as A, hydrate_node as B, get as C, clear_text_content as D, component_root as E, boundary as F, lifecycle_double_unmount as G, set_hydrate_node as H, component_context as I, hydration_failed as J, state_proxy_unmount as K, pop$1 as L, mutable_source as M, set as N, create_text as O, flushSync as P, array_from as Q, push$1 as R, active_reaction as S, set_active_reaction as T, set_hydrating as U, hydrating as V, hydration_mismatch as W, LEGACY_PROPS as X, experimental_async_required as Y, STATE_SYMBOL as Z, escape_html as _, get_user_code_location as a, writable as b, getAllContexts as c, setContext as d, noop as et, ssr_context as f, getAbortSignal as g, lifecycle_function_unavailable as h, slot as i, init_operations as j, get_first_child as k, getContext as l, hydratable_serialization_failed as m, ensure_array_like as n, get_render_context as o, hydratable_clobbering as p, HYDRATION_ERROR as q, render as r, createContext as s, derived as t, run as tt, hasContext as u, is_passive_event as v, set_active_effect as w, active_effect as x, readable as y, async_mode_flag as z };
+export { LEGACY_PROPS as $, clear_text_content as A, pop$1 as B, writable as C, set_active_effect as D, get as E, mutable_source as F, set_hydrate_node as G, async_mode_flag as H, set as I, lifecycle_double_unmount as J, set_hydrating as K, flushSync as L, get_first_child as M, get_next_sibling as N, set_active_reaction as O, init_operations as P, experimental_async_required as Q, boundary as R, readable as S, active_reaction as T, hydrate_node as U, push$1 as V, hydrating as W, HYDRATION_ERROR as X, state_proxy_unmount as Y, hydration_failed as Z, lifecycle_function_unavailable as _, render as a, escape_html as b, get_render_context as c, getContext as d, STATE_SYMBOL as et, hasContext as f, hydratable_serialization_failed as g, hydratable_clobbering as h, head as i, run as it, create_text as j, component_root as k, createContext as l, ssr_context as m, derived as n, define_property as nt, slot as o, setContext as p, hydration_mismatch as q, ensure_array_like as r, noop as rt, get_user_code_location as s, attr_class as t, array_from as tt, getAllContexts as u, getAbortSignal as v, active_effect as w, is_passive_event as x, attr as y, component_context as z };

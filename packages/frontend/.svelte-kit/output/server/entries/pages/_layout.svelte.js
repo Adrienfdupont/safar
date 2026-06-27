@@ -1,4 +1,4 @@
-import { i as slot } from "../../chunks/server.js";
+import { o as slot } from "../../chunks/server.js";
 //#region src/routes/+layout.svelte
 function _layout($$renderer, $$props) {
 	$$renderer.push(`<!--[-->`);

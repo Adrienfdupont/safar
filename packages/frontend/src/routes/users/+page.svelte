@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
   import { onMount } from 'svelte';
-  import { User } from '@safar/shared';
+  import type { User } from '@safar/shared';
 
-  let users = [];
+  let users: User[] = $state([]);
 
   onMount(async () => {
     const res = await fetch('http://localhost:3000/users');

@@ -26,7 +26,7 @@ export const options = {
 		app: ({ head, body, assets, nonce, env }) => "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    " + head + "\n  </head>\n  <body>\n    " + body + "\n  </body>\n</html>\n",
 		error
 	},
-	version_hash: "y53lh9"
+	version_hash: "408gt8"
 };
 
 export async function get_hooks() {

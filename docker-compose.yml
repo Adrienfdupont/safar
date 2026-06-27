@@ -1,0 +1,18 @@
+services:
+  frontend:
+    image: ${REGISTRY_URL}/${REGISTRY_USER}/safar-frontend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: safar-frontend
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env
+    networks:
+      - shared-network
+
+networks:
+  shared-network:
+    external: true
