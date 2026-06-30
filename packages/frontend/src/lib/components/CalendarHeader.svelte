@@ -55,7 +55,7 @@
 		border: 1px solid var(--color-border, #ddd);
 		border-radius: 20px;
 		background: transparent;
-		font-size: 0.8rem;
+		font-size: 0.85rem;
 		font-weight: 500;
 		color: var(--color-muted, #888);
 		cursor: pointer;

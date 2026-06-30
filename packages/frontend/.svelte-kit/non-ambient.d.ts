@@ -39,6 +39,6 @@ declare module "$app/types" {
 		};
 		Pathname(): "/" | "/users";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
-		Asset(): string & {};
+		Asset(): "/.DS_Store" | "/favicon-48.png" | "/icon-1024.png" | "/icon-180.png" | "/icon-192.png" | "/icon-384.png" | "/icon-512.png" | string & {};
 	}
 }

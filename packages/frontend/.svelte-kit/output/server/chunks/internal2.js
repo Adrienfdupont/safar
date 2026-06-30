@@ -568,10 +568,10 @@ var options = {
 	service_worker_options: void 0,
 	server_error_boundaries: false,
 	templates: {
-		app: ({ head, body, assets, nonce, env }) => "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    " + head + "\n  </head>\n  <body>\n    " + body + "\n  </body>\n</html>\n",
+		app: ({ head, body, assets, nonce, env }) => "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#ffffff\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/favicon-48.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"1024x1024\" href=\"/icon-1024.png\" />\n    <link rel=\"apple-touch-icon\" href=\"/icon-180.png\" />\n    " + head + "\n  </head>\n  <body>\n    " + body + "\n  </body>\n</html>\n",
 		error: error_template_default
 	},
-	version_hash: "bzh913"
+	version_hash: "139m04a"
 };
 async function get_hooks() {
 	let handle;

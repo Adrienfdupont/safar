@@ -7,10 +7,10 @@ function __memo(fn) {
 return {
 	appDir: "_app",
 	appPath: "_app",
-	assets: new Set([]),
-	mimeTypes: {},
+	assets: new Set([".DS_Store","favicon-48.png","icon-1024.png","icon-180.png","icon-192.png","icon-384.png","icon-512.png"]),
+	mimeTypes: {".png":"image/png"},
 	_: {
-		client: {start:"_app/immutable/entry/start.Dgmx_jr6.js",app:"_app/immutable/entry/app.Cv7sQwJm.js",imports:["_app/immutable/entry/start.Dgmx_jr6.js","_app/immutable/chunks/mDcMJxT0.js","_app/immutable/chunks/CK1TE3_G.js","_app/immutable/entry/app.Cv7sQwJm.js","_app/immutable/chunks/CK1TE3_G.js","_app/immutable/chunks/kNaey6uv.js","_app/immutable/chunks/xihTtKlq.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
+		client: {start:"_app/immutable/entry/start.CiTyPlnT.js",app:"_app/immutable/entry/app.Bn3GcRvl.js",imports:["_app/immutable/entry/start.CiTyPlnT.js","_app/immutable/chunks/DibqCefE.js","_app/immutable/chunks/CK1TE3_G.js","_app/immutable/entry/app.Bn3GcRvl.js","_app/immutable/chunks/CK1TE3_G.js","_app/immutable/chunks/kNaey6uv.js","_app/immutable/chunks/xihTtKlq.js"],stylesheets:[],fonts:[],uses_env_dynamic_public:false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
 			__memo(() => import('./nodes/1.js')),

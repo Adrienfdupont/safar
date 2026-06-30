@@ -97,7 +97,7 @@
 		flex-direction: column;
 		align-items: center;
 		gap: 0.15rem;
-		font-size: clamp(1rem, 3vw, 1.35rem);
+		font-size: clamp(1.15rem, 3vw, 1.35rem);
 		font-weight: 600;
 		margin: 0;
 		text-align: center;
@@ -135,7 +135,7 @@
 
 	.day-header {
 		text-align: center;
-		font-size: 0.75rem;
+		font-size: 0.8rem;
 		font-weight: 600;
 		text-transform: uppercase;
 		letter-spacing: 0.04em;
@@ -153,7 +153,7 @@
 		background: transparent;
 		border-radius: 8px;
 		cursor: pointer;
-		font-size: clamp(0.75rem, 2vw, 1rem);
+		font-size: clamp(0.9rem, 2vw, 1rem);
 		color: inherit;
 		transition: background 0.15s;
 		position: relative;
@@ -191,8 +191,8 @@
 		background: var(--color-accent, #3b82f6);
 		color: #fff;
 		border-radius: 50%;
-		width: clamp(28px, 5vw, 36px);
-		height: clamp(28px, 5vw, 36px);
+		width: clamp(32px, 5vw, 36px);
+		height: clamp(32px, 5vw, 36px);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -204,7 +204,7 @@
 		border-radius: 8px;
 		background: transparent;
 		color: inherit;
-		font-size: 0.8rem;
+		font-size: 0.85rem;
 		font-weight: 500;
 		cursor: pointer;
 		transition: background 0.15s;

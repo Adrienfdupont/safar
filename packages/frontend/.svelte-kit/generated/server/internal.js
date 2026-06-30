@@ -23,10 +23,10 @@ export const options = {
 	service_worker_options: undefined,
 	server_error_boundaries: false,
 	templates: {
-		app: ({ head, body, assets, nonce, env }) => "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    " + head + "\n  </head>\n  <body>\n    " + body + "\n  </body>\n</html>\n",
+		app: ({ head, body, assets, nonce, env }) => "<!doctype html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"utf-8\" />\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\n    <meta name=\"theme-color\" content=\"#ffffff\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"48x48\" href=\"/favicon-48.png\" />\n    <link rel=\"icon\" type=\"image/png\" sizes=\"1024x1024\" href=\"/icon-1024.png\" />\n    <link rel=\"apple-touch-icon\" href=\"/icon-180.png\" />\n    " + head + "\n  </head>\n  <body>\n    " + body + "\n  </body>\n</html>\n",
 		error
 	},
-	version_hash: "408gt8"
+	version_hash: "k8pecw"
 };
 
 export async function get_hooks() {
